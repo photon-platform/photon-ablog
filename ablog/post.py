@@ -611,12 +611,12 @@ def generate_archive_pages(app):
     feed_archives = blog.blog_feed_archives
     blog_path = blog.blog_path
     for title, header, catalog in [
-        (_("Authors"), _("Posts by"), blog.author),
-        (_("Locations"), _("Posts from"), blog.location),
-        (_("Languages"), _("Posts in"), blog.language),
-        (_("Categories"), _("Posts in"), blog.category),
-        (_("All posts"), _("Posted in"), blog.archive),
-        (_("Tags"), _("Posts tagged"), blog.tags),
+        (_("Authors"), _("author > "), blog.author),
+        (_("Locations"), _("location > "), blog.location),
+        (_("Languages"), _("language > "), blog.language),
+        (_("Categories"), _("category > "), blog.category),
+        (_("All posts"), _("archive > "), blog.archive),
+        (_("Tags"), _("tag > "), blog.tags),
     ]:
 
         if not catalog:
