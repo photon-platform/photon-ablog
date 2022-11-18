@@ -93,8 +93,8 @@ DEBUG = True
 CONFIG = [
     # name, default, rebuild, verify_fn
     # where verify_fn is (key, value, app.config) --> value, throwing a KeyError if the value isn't right
-    ("blog_path", "blog", True, require_config_type(str)),
-    ("blog_title", "Blog", True, require_config_type(str)),
+    ("blog_path", "log", True, require_config_type(str)),
+    ("blog_title", "LOG", True, require_config_type(str)),
     ("blog_baseurl", "", True, require_config_type(str)),
     ("blog_archive_titles", None, False, require_config_type(bool)),
     ("blog_feed_archives", False, True),
@@ -112,8 +112,8 @@ CONFIG = [
     ("fontawesome_link_cdn", None, True),
     ("fontawesome_included", False, True, require_config_type(bool)),
     ("fontawesome_css_file", "", True, require_config_type(str)),
-    ("post_date_format", "%d %B %Y", True, require_config_type(str)),
-    ("post_date_format_short", "%d %B", True, require_config_type(str)),
+    ("post_date_format", "%y.%j-%H%M%S", True, require_config_type(str)),
+    ("post_date_format_short", "%y.%j", True, require_config_type(str)),
     ("post_auto_orphan", True, True, require_config_type(bool)),
     ("post_auto_image", 0, True),
     ("post_auto_excerpt", 1, True),

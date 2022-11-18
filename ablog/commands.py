@@ -15,7 +15,7 @@ import ablog
 
 from .start import ablog_start
 
-BUILDDIR = "_website"
+BUILDDIR = "docs"
 DOCTREES = ".doctrees"
 
 __all__ = ["ablog_build", "ablog_clean", "ablog_serve", "ablog_deploy", "ablog_main"]
@@ -283,7 +283,7 @@ def ablog_serve(website=None, port=8000, view=True, rebuild=False, patterns="*.r
     print(f"Serving HTTP on {ip}:{port}.")
     print("Quit the server with Control-C.")
 
-    website = website or os.path.join(confdir, getattr(conf, "ablog_website", "_website"))
+    website = website or os.path.join(confdir, getattr(conf, "ablog_website", BUILDDIR))
 
     os.chdir(website)
 

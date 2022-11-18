@@ -697,12 +697,12 @@ def generate_atom_feeds(app):
 
     if blog.blog_feed_archives:
         for header, catalog in [
-            (_("Posts by"), blog.author),
-            (_("Posts from"), blog.location),
-            (_("Posts in"), blog.language),
-            (_("Posts in"), blog.category),
-            (_("Posted in"), blog.archive),
-            (_("Posts tagged"), blog.tags),
+            (_("author > "), blog.author),
+            (_("location > "), blog.location),
+            (_("language > "), blog.language),
+            (_("category > "), blog.category),
+            (_("archive > "), blog.archive),
+            (_("tag > "), blog.tags),
         ]:
 
             for coll in catalog:
