@@ -480,9 +480,9 @@ def generate(d, overwrite=True, silent=False):
 
     d["copyright"] = time.strftime("%Y") + ", " + d["author"]
     d["author_texescaped"] = texescape.escape(str(d["author"]).translate(str(d["author"])))
-    d["project_doc"] = d["project"] + " Documentation"
+    d["project_doc"] = d["project"] 
     d["project_doc_texescaped"] = texescape.escape(
-        str(d["project"] + " Documentation").translate(str(d["project"] + " Documentation"))
+        str(d["project"]).translate(str(d["project"]))
     )
 
     if not path.isdir(d["path"]):

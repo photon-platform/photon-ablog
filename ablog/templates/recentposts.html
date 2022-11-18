@@ -1,6 +1,6 @@
 {% if ablog %}
 <h3>
-  <a href="{{ pathto(ablog.blog_path) }}">{{ gettext('Recent Posts') }}</a>
+  <a href="{{ pathto(ablog.blog_path) }}">{{ gettext('LOG recent') }}</a>
 </h3>
 <ul>
   {% set pcount = 1 %} {% for recent in ablog.recent(5, pagename) %}
