@@ -467,6 +467,7 @@ def process_postlist(app, doctree, docname):
 
     Also, register all posts if they have not been registered yet.
     """
+    
 
     blog = Blog(app)
     if not blog:
@@ -643,25 +644,27 @@ def generate_archive_pages(app):
             if collection.docname not in found_docs:
                 yield (collection.docname, context, "collection.html")
 
-    # ppp = 5
-    # for page, i in enumerate(range(0, len(blog.posts), ppp)):
-    if 1:
-        context = {
-            "parents": [],
-            "title": _("All Posts"),
-            "header": _("All"),
-            "collection": blog.posts,
-            "summary": True,
-            "atom_feed": atom_feed,
-            "feed_path": blog.blog_path,
+    # collect published posts
+    context = {
+        "parents": [],
+        "title": _("All Posts"),
+        "header": _("All"),
+        "collection": blog.posts,
+        "summary": True,
+        "atom_feed": atom_feed,
+        "feed_path": blog.blog_path,
         }
-        docname = blog.posts.docname
-        # if page:
-        #    docname += '/' + str(page)
-        yield (docname, context, "collection.html")
+    docname = blog.posts.docname
+    yield (docname, context, "collection.html")
 
-    context = {"parents": [], "title": _("Drafts"), "collection": blog.drafts, "summary": True}
-    yield (blog.drafts.docname, context, "collection.html")
+    context = {
+            "parents": [],
+            "title": _("Drafts"),
+            "collection": blog.drafts,
+            "summary": True
+            }
+    docname = blog.drafts.docname
+    yield (docname, context, "collection.html")
 
 
 def generate_atom_feeds(app):
