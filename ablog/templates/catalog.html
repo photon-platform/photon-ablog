@@ -8,7 +8,7 @@ if collection %}
   {% for post in collection %}
   <div class="section">
     <p>
-      {% if fa %}{% endif %} {% if post.published %} {{
+      {% if post.published %} {{
       post.date.strftime(ablog.post_date_format) }} {% else %} Draft {% endif %}
       -
       <a href="{{ pathto(post.docname) }}{{ anchor(post) }}"
