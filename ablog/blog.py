@@ -90,6 +90,19 @@ def require_config_full_name_link_dict(is_link_optional=True):
 
 
 DEBUG = True
+ 
+html_sidebars_default = {
+    '**': [ 
+        'postcard.html', 
+        'searchbox.html',
+        'navigation.html',
+        'recentposts.html', 
+        'tagcloud.html',
+        'categories.html',  
+        'archives.html',
+        'about.html',
+        ],
+    }
 CONFIG = [
     # name, default, rebuild, verify_fn
     # where verify_fn is (key, value, app.config) --> value, throwing a KeyError if the value isn't right
@@ -124,6 +137,8 @@ CONFIG = [
     ("disqus_drafts", False, True),
     ("disqus_pages", False, True),
     ("blog_post_pattern", [], True, require_config_type((str, list))),
+    #  ("html_sidebars", html_sidebars_default, False,),
+    
 ]
 
 TOMORROW = datetime.today() + dtmod.timedelta(1)
