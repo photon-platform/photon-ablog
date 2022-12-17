@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://photon-platform.github.io/photon-ablog</id>
   <title>PHOTON platform • ablog</title>
-  <updated>2022-12-17T15:16:18.682423+00:00</updated>
+  <updated>2022-12-17T16:39:01.608755+00:00</updated>
   <link href="https://photon-platform.github.io/photon-ablog"/>
   <link href="https://photon-platform.github.io/photon-ablog/log/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.26.dev4+g4d03eb4">ABlog</generator>
@@ -42,5 +42,18 @@
     <link href="https://photon-platform.github.io/photon-ablog/log/22.351-070811/" rel="alternate"/>
     <summary>these ultimately need to work together</summary>
     <published>2022-12-17T07:08:11-08:00</published>
+  </entry>
+  <entry>
+    <id>https://photon-platform.github.io/photon-ablog/log/22.351-073048/</id>
+    <title>Reset project version and git tags</title>
+    <updated>2022-12-17T07:30:48-08:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;set a consistent method for this in the code&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://photon-platform.github.io/photon-ablog/log/22.351-073048/" rel="alternate"/>
+    <summary>set a consistent method for this in the code</summary>
+    <category term="urgent" label="urgent"/>
+    <published>2022-12-17T07:30:48-08:00</published>
   </entry>
 </feed>
