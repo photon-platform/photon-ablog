@@ -125,6 +125,7 @@ extensions = [
     'sphinx.ext.todo',
     'photonsphinx',
     'ablog',
+    'myst_parser',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
