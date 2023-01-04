@@ -132,7 +132,11 @@ extensions = [
 templates_path = ["_templates", ablog.get_html_templates_path()]
 
 # The suffix(es) of source filenames.
-source_suffix = ".rst"
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
+}
 
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
