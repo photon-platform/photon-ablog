@@ -43,9 +43,12 @@ blog_baseurl = ""
 
 html_sidebars = {
     '**': [ 'about.html',
-            'postcard.html', 'navigation.html',
-            'recentposts.html', 'tagcloud.html',
-            'categories.html',  'archives.html',
+            'postcard.html', 
+            'navigation.html',
+            #  'recentposts.html', 
+            'tagcloud.html',
+            'categories.html',  
+            'archives.html',
             'searchbox.html',
             ],
     }
@@ -117,6 +120,7 @@ html_sidebars = {
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinx.ext.extlinks',
     'sphinx.ext.intersphinx',
     'sphinx.ext.githubpages',

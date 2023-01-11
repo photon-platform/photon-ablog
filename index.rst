@@ -19,12 +19,13 @@ urgent todos:
    :tags: urgent
    :excerpts:
 
-
+contents
+--------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-
+   MODULES <modules/modules.rst>
 
 
 
