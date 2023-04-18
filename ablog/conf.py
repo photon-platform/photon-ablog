@@ -45,7 +45,7 @@ html_sidebars = {
     '**': [ 'about.html',
             'postcard.html', 
             'navigation.html',
-            #  'recentposts.html', 
+            'recentposts.html', 
             'tagcloud.html',
             'categories.html',  
             'archives.html',
