@@ -2,6 +2,10 @@ __pycache__
 .doctrees
 tags
 *.swp
+*.py[cod]
+
+# Build artifacts
+build/
+dist/
 *.egg-info/
 *.egg-info
-*.py[cod]
