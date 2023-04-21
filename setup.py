@@ -18,8 +18,9 @@ ex_extras = dict(filter(lambda i: i[0] not in exclude_keys, extras.items()))
 extras["all"] = list(chain.from_iterable(ex_extras.values()))
 
 setup(
+    version="0.1.0",
     extras_require=extras,
-    use_scm_version=True,
+    #  use_scm_version=True,
     message_extractors={
         "ablog": [
             ("**.py", "python", None),
