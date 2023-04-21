@@ -45,7 +45,7 @@ html_sidebars = {
     '**': [ 'about.html',
             'postcard.html', 
             'navigation.html',
-            #  'recentposts.html', 
+            'recentposts.html', 
             'tagcloud.html',
             'categories.html',  
             'archives.html',
@@ -177,7 +177,7 @@ language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['.archive', '.docs', 'tests']
+exclude_patterns = ['.archive', '.docs', 'tests', '*.egg-info']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
