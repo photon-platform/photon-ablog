@@ -10,6 +10,7 @@ in general this should just leave the peronalized elements
 import ablog
 import photonsphinx
 from datetime import datetime
+
 year = datetime.now().year
 
 #  blog_path = 'log'
@@ -27,7 +28,7 @@ blog_baseurl = ""
 # blog_archive_titles = False
 
 #  blog_authors = {
-    #  "phi ARCHITECT": ("phi ARCHITECT", None),
+#  "phi ARCHITECT": ("phi ARCHITECT", None),
 #  }
 # blog_languages = {
 #    'en': ('English', None),
@@ -42,16 +43,17 @@ blog_baseurl = ""
 # post_show_prev_next = True
 
 html_sidebars = {
-    '**': [ 'about.html',
-            'postcard.html', 
-            'navigation.html',
-            'recentposts.html', 
-            'tagcloud.html',
-            'categories.html',  
-            'archives.html',
-            'searchbox.html',
-            ],
-    }
+    "**": [
+        "about.html",
+        "postcard.html",
+        "navigation.html",
+        "recentposts.html",
+        "tagcloud.html",
+        "categories.html",
+        "archives.html",
+        "searchbox.html",
+    ],
+}
 
 # blog_feed_archives = False
 # blog_feed_fulltext = False
@@ -119,17 +121,17 @@ html_sidebars = {
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.extlinks',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.githubpages',
-    'sphinx.ext.graphviz',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.todo',
-    'photonsphinx',
-    'ablog',
-    'myst_parser',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.githubpages",
+    "sphinx.ext.graphviz",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.todo",
+    "photonsphinx",
+    "ablog",
+    "myst_parser",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -137,9 +139,9 @@ templates_path = ["_templates", ablog.get_html_templates_path()]
 
 # The suffix(es) of source filenames.
 source_suffix = {
-    '.rst': 'restructuredtext',
-    '.txt': 'markdown',
-    '.md': 'markdown',
+    ".rst": "restructuredtext",
+    ".txt": "markdown",
+    ".md": "markdown",
 }
 
 # The encoding of source files.
@@ -177,7 +179,7 @@ language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['.archive', '.docs', 'tests', '*.egg-info']
+exclude_patterns = [".archive", ".docs", "tests", "*.egg-info"]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -195,7 +197,7 @@ exclude_patterns = ['.archive', '.docs', 'tests', '*.egg-info']
 # show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'gruvbox-dark'
+pygments_style = "gruvbox-dark"
 
 # A list of ignored prefixes for module index sorting.
 # modindex_common_prefix = []
@@ -211,7 +213,7 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'photonsphinx'
+html_theme = "photonsphinx"
 
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -300,15 +302,15 @@ htmlhelp_basename = "help_doc"
 
 
 #  'logo': 'phi-headshot-sqr.jpg',
-    
+
 html_theme_options = {
-    'logo': 'logo.png',
-    'logo_name': True,
-    'github_user': 'photon-platform',
-    'github_repo': 'photon-ablog',
-    'github_button': True,
+    "logo": "logo.png",
+    "logo_name": True,
+    "github_user": "photon-platform",
+    "github_repo": "photon-ablog",
+    "github_button": True,
 }
 
-ablog_website = 'docs'
-post_date_format = '%y.%j-%H%M%S'
-post_date_format_short = '%y.%j'
+ablog_website = "../docs"
+post_date_format = "%y.%j-%H%M%S"
+post_date_format_short = "%y.%j"

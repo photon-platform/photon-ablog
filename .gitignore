@@ -5,7 +5,7 @@ tags
 *.py[cod]
 
 # Build artifacts
-build/
-dist/
+build
+dist
 *.egg-info/
 *.egg-info
