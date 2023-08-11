@@ -304,6 +304,7 @@ htmlhelp_basename = "help_doc"
 #  'logo': 'phi-headshot-sqr.jpg',
 
 html_theme_options = {
+    "html_logo": "logo.png",
     "logo": "logo.png",
     "logo_name": True,
     "github_user": "photon-platform",
@@ -314,3 +315,7 @@ html_theme_options = {
 ablog_website = "../docs"
 post_date_format = "%y.%j-%H%M%S"
 post_date_format_short = "%y.%j"
+
+intersphinx_mapping = {
+    'sympy': ('https://docs.sympy.org/latest/', None),
+}
