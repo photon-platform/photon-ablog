@@ -320,5 +320,5 @@ post_date_format_short = "%y.%j"
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3.9", None),
     "sympy": ("https://docs.sympy.org/latest", None),
-    "matplotlib": ("http://matplotlib.sourceforge.net", None),
+    "matplotlib": ("https://matplotlib.org/stable", None),
 }
