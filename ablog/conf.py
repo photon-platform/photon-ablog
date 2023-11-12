@@ -348,4 +348,5 @@ autodoc_default_options = {
     'show-inheritance': True,
 }
 
+html_css_files = [ "https://geometor.github.io/model/_static/css/rtd-dark.css" ]
 
