@@ -8,7 +8,7 @@ override any values in the project's ``conf.py``
 in general this should just leave the peronalized elements
 """
 import ablog
-import photonsphinx
+#  import photonsphinx
 from datetime import datetime
 
 year = datetime.now().year
@@ -130,7 +130,6 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
-    "photonsphinx",
     "ablog",
     "myst_parser",
 ]
@@ -214,11 +213,13 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "photonsphinx"
+
+#  html_theme = "photonsphinx"
+html_theme = "sphinx_rtd_theme"
 
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [photonsphinx.get_path()]
+#  html_theme_path = [photonsphinx.get_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -304,13 +305,18 @@ htmlhelp_basename = "help_doc"
 
 #  'logo': 'phi-headshot-sqr.jpg',
 
+#  html_theme_options = {
+    #  "html_logo": "logo.png",
+    #  "logo": "logo.png",
+    #  "logo_name": True,
+    #  "github_user": "photon-platform",
+    #  "github_repo": "photon-ablog",
+    #  "github_button": True,
+#  }
 html_theme_options = {
-    "html_logo": "logo.png",
-    "logo": "logo.png",
-    "logo_name": True,
-    "github_user": "photon-platform",
-    "github_repo": "photon-ablog",
-    "github_button": True,
+    'display_version': False,
+    'navigation_depth': -1,
+    'prev_next_buttons_location': 'both',
 }
 
 ablog_website = "../docs"
@@ -322,3 +328,24 @@ intersphinx_mapping = {
     "sympy": ("https://docs.sympy.org/latest", None),
     "matplotlib": ("https://matplotlib.org/stable", None),
 }
+
+html_logo = "_static/logo.png"
+
+#  html_context = {
+    #  "display_github": True, # Integrate GitHub
+    #  "github_user": org, # Username
+    #  "github_repo": repo, # Repo name
+    #  "github_version": "main", # Version
+    #  "conf_py_path": "/docsrc/", # Path in the checkout to the docs root
+#  }
+
+autodoc_default_options = {
+    'members': True,
+    'member-order': 'bysource',
+    #  'special-members': '__init__',
+    'undoc-members': True,
+    #  'exclude-members': '__weakref__'
+    'show-inheritance': True,
+}
+
+
