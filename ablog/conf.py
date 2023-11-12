@@ -9,6 +9,7 @@ in general this should just leave the peronalized elements
 """
 import ablog
 #  import photonsphinx
+import sphinx_rtd_theme
 from datetime import datetime
 
 year = datetime.now().year
@@ -302,8 +303,6 @@ html_static_path = ["_static"]
 # Output file base name for HTML help builder.
 htmlhelp_basename = "help_doc"
 
-
-#  'logo': 'phi-headshot-sqr.jpg',
 
 #  html_theme_options = {
     #  "html_logo": "logo.png",
