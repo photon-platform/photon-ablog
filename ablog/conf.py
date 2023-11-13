@@ -8,9 +8,41 @@ override any values in the project's ``conf.py``
 in general this should just leave the peronalized elements
 """
 import ablog
+
 #  import photonsphinx
 import sphinx_rtd_theme
 from datetime import datetime
+
+
+def setup_globals(org, org_name, repo, repo_name):
+    globals().update(
+        {
+            "org": org,
+            "org_name": org_name,
+            "repo": repo,
+            "repo_name": repo_name,
+            "blog_title": f"{org_name} • {repo_name}",
+            "html_title": f"{org_name} • {repo_name}",
+            "project": f"{org_name} • {repo_name}",
+            "version": "",  # The short X.Y version.
+            "release": "",  # The full version, including alpha/beta/rc tags.
+            "copyright": f"{year}, {org_name}",
+            "author": org_name,
+            "blog_baseurl": f"https://{org}.github.io/{repo}",
+            "html_base_url": f"https://{org}.github.io/{repo}",
+            "html_baseurl": f"https://{org}.github.io/{repo}",
+            "blog_authors": {"phi": ("phi ARCHITECT", None)},
+            "html_context": {
+                "display_github": True,
+                "github_user": org,
+                "github_repo": repo,
+                "github_version": "main",
+                "conf_py_path": "/docsrc/",
+            },
+            # Add other global settings that should be the same across all projects here.
+        }
+    )
+
 
 year = datetime.now().year
 
@@ -305,17 +337,17 @@ htmlhelp_basename = "help_doc"
 
 
 #  html_theme_options = {
-    #  "html_logo": "logo.png",
-    #  "logo": "logo.png",
-    #  "logo_name": True,
-    #  "github_user": "photon-platform",
-    #  "github_repo": "photon-ablog",
-    #  "github_button": True,
+#  "html_logo": "logo.png",
+#  "logo": "logo.png",
+#  "logo_name": True,
+#  "github_user": "photon-platform",
+#  "github_repo": "photon-ablog",
+#  "github_button": True,
 #  }
 html_theme_options = {
-    'display_version': False,
-    'navigation_depth': -1,
-    'prev_next_buttons_location': 'both',
+    "display_version": False,
+    "navigation_depth": -1,
+    "prev_next_buttons_location": "both",
 }
 
 ablog_website = "../docs"
@@ -331,21 +363,20 @@ intersphinx_mapping = {
 html_logo = "_static/logo.png"
 
 #  html_context = {
-    #  "display_github": True, # Integrate GitHub
-    #  "github_user": org, # Username
-    #  "github_repo": repo, # Repo name
-    #  "github_version": "main", # Version
-    #  "conf_py_path": "/docsrc/", # Path in the checkout to the docs root
+#  "display_github": True, # Integrate GitHub
+#  "github_user": org, # Username
+#  "github_repo": repo, # Repo name
+#  "github_version": "main", # Version
+#  "conf_py_path": "/docsrc/", # Path in the checkout to the docs root
 #  }
 
 autodoc_default_options = {
-    'members': True,
-    'member-order': 'bysource',
+    "members": True,
+    "member-order": "bysource",
     #  'special-members': '__init__',
-    'undoc-members': True,
+    "undoc-members": True,
     #  'exclude-members': '__weakref__'
-    'show-inheritance': True,
+    "show-inheritance": True,
 }
 
-html_css_files = [ "https://geometor.github.io/model/_static/css/rtd-dark.css" ]
-
+html_css_files = ["https://geometor.github.io/model/_static/css/rtd-dark.css"]
