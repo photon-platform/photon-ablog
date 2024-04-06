@@ -163,8 +163,19 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
+    "sphinxcontrib.youtube",
     "ablog",
     "myst_parser",
+    "myst_parser",
+    "sphinx_revealjs",
+    "sphinx_revealjs.ext.footnotes",
+    #  "sphinx_revealjs.ext.screenshot",
+    #  "sphinxcontrib.budoux",
+    #  "sphinxcontrib.gtagjs",
+    #  "sphinxcontrib.oembed",
+    #  "sphinxcontrib.sass",
+    "sphinxext.opengraph",
+
 ]
 
 # Add any paths that contain templates here, relative to this directory.
