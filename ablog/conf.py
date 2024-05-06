@@ -10,7 +10,7 @@ in general this should just leave the peronalized elements
 import ablog
 
 #  import photonsphinx
-import sphinx_rtd_theme
+#  import sphinx_rtd_theme
 from datetime import datetime
 
 
@@ -390,5 +390,5 @@ autodoc_default_options = {
     "show-inheritance": True,
 }
 
-html_css_files = ["https://geometor.github.io/model/_static/css/rtd-dark.css"]
+#  html_css_files = ["https://geometor.github.io/model/_static/css/rtd-dark.css"]
 html_permalinks = True
